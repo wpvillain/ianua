@@ -4,7 +4,7 @@
 
 Ianua is a WordPress theme that will help you make better WordPress websites.
 
-* Source: [https://github.com/jasperf/ianua/tree/master/site/web/app/themes/ianua](https://github.com/jasperf/ianua/tree/master/site/web/app/themes/ianua)
+* Source: [https://github.com/WPVillain/ianua](https://github.com/WPVillain/ianua)
 * Homepage: [https://ianua.com](https://ianua.com)
 
 ## Requirements
