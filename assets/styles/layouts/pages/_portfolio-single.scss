@@ -1,0 +1,39 @@
+// -------------------------------------------------------------------
+//
+// PORFOLIO SINGLE STYLES
+//
+// -------------------------------------------------------------------
+
+/** 
+ * ===================================================================
+ * portfolio single - (portfolio-single.scss) 
+ * 
+ * ------------------------------------------------------------------- 
+ */
+
+.project-single {
+
+	.media-wrap img {
+		vertical-align: bottom;
+	}
+
+	// pagenav
+	.pagenav {
+		margin-top: 5rem;
+	}
+}
+
+/**
+ * responsive:
+ * -----------
+ * portfolio single
+ * 
+ */
+
+@include ss-mq(tablet) {
+
+	#sidebar .button {
+		width: 100%;
+	}
+
+}

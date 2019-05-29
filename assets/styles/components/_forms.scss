@@ -1,0 +1,299 @@
+// -------------------------------------------------------------------
+//
+// FORMS
+//
+// -------------------------------------------------------------------
+
+/** 
+ * ===================================================================
+ * forms - (_forms.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+
+fieldset { border: none; }
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+	display: block;
+	height: 6rem;
+   padding: 1.5rem 2rem;
+   border: 0;
+   outline: none;
+   vertical-align: middle;    	
+	color: $color-text;
+	font-family: $font-1, sans-serif;
+	font-size: 1.5rem;
+   line-height: 3rem;
+   border-radius: 3px;
+   max-width: 100%;
+	background: $color-white; 
+	border: 1px solid #d5d5d5; 	
+	@include ss-transition(all, .3s); 	
+}
+
+/** 
+ * custom select 
+ * -
+ */
+
+.iw-custom-select {
+	position: relative;
+  	padding: 0;  
+
+  	select {
+		-webkit-appearance: none;
+      -moz-appearance: none;
+      -ms-appearance: none;
+      -o-appearance: none;
+   	appearance: none;
+   	text-indent: 0.01px; 
+   	text-overflow: '';
+   	margin: 0;
+   	line-height: 3rem;     	
+   	vertical-align: middle;  
+
+   	option {
+   		padding-left: 2rem;
+   		padding-right: 2rem;   		 
+   	} 
+   }
+
+   select::-ms-expand {
+	  	display: none;
+	}
+
+   &::after {
+		content: '\f0d7';
+		font-family: 'FontAwesome'; 
+		position: absolute; 	
+	  	top: 50%;
+	  	right: 18px;
+	  	margin-top: -10px;
+	  	bottom: auto;     
+	   width: 20px;
+	   height: 20px;
+	   line-height: 20px; 
+	   font-size: 16px; 	 
+	   text-align: center; 
+	   pointer-events: none;
+	   color: #252525;
+	}		
+
+}
+
+
+/** 
+ * jQuery Nice Select styles 
+ * -
+ */
+
+.js select.niceselect {
+   display: none;
+}
+
+/* style the dropdown */
+.nice-select {
+	position: relative;    
+ 	display: block;
+   float: left;
+   clear: both;
+   cursor: pointer;
+   outline: none;
+   user-select: none;
+   white-space: nowrap;
+   width: auto;
+   // overflow: hidden;
+
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   background-color: $color-white;
+   border-radius: 3px;
+   border: 1px solid #d5d5d5; 
+
+   height: 6rem;
+   padding: 1.5rem 5rem 1.5rem 2rem;
+   vertical-align: middle; 
+   
+   font-family: inherit;
+   font-size: 1.5rem;
+   font-weight: normal;  
+   line-height: 2.8rem;  
+
+   @include ss-transition(all, .3s); 
+  
+   &:active, &:focus, &:hover  {
+   	color: #252525;
+		background: lighten($color-1, 60%);	
+		border: 1px solid lighten($color-1, 53%);
+   }
+
+   // Arrow
+   &:after { 
+      content: '\f0d7';
+		font-family: 'FontAwesome'; 
+		position: absolute; 	
+	  	top: 50%;
+	  	right: 15px;
+	  	margin-top: -10px;
+	  	bottom: auto;     
+	   width: 20px;
+	   height: 20px;
+	   line-height: 20px; 
+	   font-size: 14px; 	 
+	   text-align: center; 
+	   pointer-events: none;
+	   color: $color-text;
+   }
+
+   // List and options
+  	.list {
+    	background-color: $color-white;    	
+    	color: $color-text;
+    	border-radius: 0 0 3px 3px;
+    	border: 1px solid #d5d5d5; 
+    	box-shadow: 0 1 3px 3px rgba(#111, .05);
+      margin: 5px 0 0;
+      z-index: $zindex-1;
+
+      // for animation
+    	opacity: 0;
+    	visibility: hidden;
+    
+    	padding: 0;
+    	margin-left: 0;    	
+    	width: 100%;
+    	max-height: 40rem;
+    	overflow-y: auto;
+    	pointer-events: none;
+    	cursor: default;
+
+    	position: absolute;
+    	top: 100%; 
+    	left: 0;
+
+      -webkit-transition: opacity 0.5s, visibility 0.3s;
+      -moz-transition: opacity 0.5s, visibility 0.3s;
+      transition: opacity 0.5s, visibility 0.3s;
+    	
+
+    	&:hover .option:not(:hover) {
+      	background-color: transparent !important;
+    	}
+  	}
+
+  .option {
+   	cursor: pointer;    		
+    	list-style: none;
+    	line-height: 4.5rem;
+      outline: none;
+    	padding-left: 2rem;
+      padding-right: 5rem;
+      @include ss-transition(all, .3s);      
+
+    	&:hover, &.focus, &.selected.focus { 
+      	background-color: #EAEAEA;      	
+    	}
+    	&.selected { 
+      	font-family: $font-1-semibold, sans-serif;    
+      	color: #252525;  	
+    	}
+    	&.disabled {
+      	background-color: transparent;
+      	color: $color-text-light;
+      	cursor: default;
+    	}
+   }
+  
+   &.open { 
+   	overflow: visible;  
+
+    	.list {
+      	opacity: 1;
+      	visibility: visible;      	
+      	pointer-events: auto;
+      }
+  	}
+
+   .disabled {
+      color: $color-text-light;
+      pointer-events: none;   
+      cursor: default;    
+  	}  
+  	
+}
+
+textarea { 
+	min-height: 25rem; 
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+	color: $color-black;
+	background: lighten($color-1, 60%);	
+	border: 1px solid lighten($color-1, 53%);	 	
+}
+
+label, legend {
+   font-family: $font-1-bold, sans-serif;
+   font-size: 1.4rem;
+   margin-bottom: .6rem;
+	color: $color-text-dark;
+   display: block;
+}
+// label span, legend span {
+// 	color: $color-1;   
+// }
+
+input[type="checkbox"],
+input[type="radio"] {
+   display: inline;
+}
+
+label > .label-text {
+ 	display: inline-block;
+  	margin-left: 1rem;
+  	font-family: $font-1, sans-serif;
+  	line-height: inherit;
+}
+label > input[type="checkbox"],
+label > input[type="radio"] {
+	margin: 0;
+	position: relative;
+	top: .15rem;
+}
+
+
+/**
+ * Style Placeholder Text  
+ * -
+ */
+
+::-webkit-input-placeholder {
+   color: $color-placeholder;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: $color-placeholder;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $color-placeholder;  
+}
+:-ms-input-placeholder { 
+   color: $color-placeholder;  
+}
+.placeholder {
+	color: $color-placeholder !important;
+}

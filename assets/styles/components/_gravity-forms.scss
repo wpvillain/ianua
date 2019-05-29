@@ -1,0 +1,223 @@
+/* Subscribtion Form */
+
+
+body #subscribe .gform_wrapper input[type="email"] {
+    background: #13171e;
+    padding-left: 50px;
+    font-size: 1.6rem;
+    font-family: "opensans-semibold", sans-serif;
+    border: none;
+}
+
+body #subscribe .gform_wrapper .gform_footer input.button, 
+body #subscribe .gform_wrapper .gform_page_footer input.button,
+body #subscribe .gform_wrapper .gform_footer input[type=submit],
+body #subscribe .gform_wrapper .gform_page_footer input[type=submit] {
+        background: #017cb6;
+        color: #ffffff;
+        margin-top: 0rem;
+}
+
+body #subscribe .gform_wrapper .gform_footer input.button:hover, 
+body #subscribe .gform_wrapper .gform_page_footer input.button:hover,
+body #subscribe .gform_wrapper .gform_footer input[type=submit]:hover, 
+body #subscribe .gform_wrapper .gform_page_footer input[type=submit]:hover {
+    background: #016798;
+    color: #FFFFFF;
+}
+
+body #subscribe input[type=submit] {
+    line-height: 0rem;
+}
+
+body #subscribe .gform_wrapper h3.gform_title {
+        font-family: $font-1-light, sans-serif;
+        line-height: 3.5rem;
+        color: lighten(#465166, 20%);
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+body #subscribe .gform_wrapper h3.gform_title {
+        font-family: $font-1-light, sans-serif;
+        font-size: 2.2rem;
+        line-height: 3.5rem;
+        width: 70%;
+        color: lighten(#465166, 20%);
+        text-align: center;
+        margin-bottom: 20px;
+        margin-left: auto;
+        margin-right: auto;
+}
+
+body #subscribe .gform_wrapper form {
+    margin-top: 0rem;
+}
+
+body #subscribe .gform_wrapper input[type="email"], #subscribe .gform_wrapper input[type="text"] {
+    color: #858585;
+}
+
+#subscribe .gform_wrapper input[type="email"]:focus, #subscribe .gform_wrapper input[type="text"]:focus {
+    color: #ddd;
+}
+
+body #subscribe .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+    padding: 0px 0px 0px 2rem;
+    background: #13171e;
+    border:none;
+}
+
+/** Media query max 600px **/
+
+@media only screen and (max-width: 600px) {
+body #subscribe .gform_wrapper .ginput_container_email input[type='text'] {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#subscribe .gform_wrapper input[type="email"] {
+    text-align: center;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+} /** End media query max 600px **/
+
+
+/** Media query max 768px **/
+
+@media only screen and (max-width: 768px) {
+#subscribe .row .tab-fourth, .tab-fourth {
+    width: 100%;
+}
+
+
+body .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+    padding: 1.5rem 2rem;
+}
+
+
+
+} /** End media query max 768px **/
+
+@include ss-mq(tablet) {
+
+    body #subscribe .gform_wrapper h3.gform_title {
+        width: 90%;
+        font-size: 2rem;
+        line-height: 3rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/** Media query min 641px **/
+
+@media only screen and (min-width: 641px) {
+
+
+body #subscribe .gform_wrapper .gform_body,
+body #subscribe .gform_wrapper .gform_footer {
+  @include gfcalc(width, "50% + 0px");
+  float:left;
+}
+
+body #subscribe .gform_wrapper .gform_footer {
+	clear:none;
+	padding:0px 0px 0px 16px;
+	margin:0px;
+}
+
+body #subscribe label {
+	min-height:0px;
+    margin-bottom: 0rem;
+
+}
+
+body #subscribe .gform_wrapper .top_label div.ginput_container {
+    margin-top: 0px;
+}
+
+
+body #subscribe .gform_wrapper ul li.gfield {
+    margin-top: 0px;
+}
+
+body #subscribe .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+    padding: 0px 0px 0px 50px;
+    background: #13171e;
+    border:none;
+}
+
+body #subscribe .gform_wrapper .gform_heading {
+    margin-bottom: 4rem; 
+}
+
+} /** End media query min 641px **/
+
+/* End Subscribtion Form */
+
+
+/* Quotation Form */
+
+body .quotation_wrapper .gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+    padding: 1.5rem 2rem;
+}
+
+body .quotation .gform_wrapper .gform_footer input[type=submit], 
+body .quotation .gform_wrapper .gform_page_footer input.button, 
+body .quotation .gform_wrapper .gform_page_footer input[type=submit], 
+body .quotation .gform_wrapper .gform_footer input.button {
+    background: #d8d8d8;
+    color: #252525;
+    width: 100%;
+}
+
+body .quotation .gform_wrapper .gform_footer input[type=submit]:hover, 
+body .quotation .gform_wrapper .gform_page_footer input.button:hover, 
+body .quotation .gform_wrapper .gform_page_footer input[type=submit]:hover, 
+body .quotation .gform_wrapper .gform_footer input.button:hover {
+    background: #bebebe;
+    color: #000000;
+}
+
+body .quotation .gform_wrapper body .quotation .gform_footer input[type=submit]:hover, 
+body .quotation .gform_wrapper .gform_page_footer input.button:hover, 
+body .quotation .gform_wrapper .gform_page_footer input[type=submit]:hover, 
+body .quotation .gform_wrapper .gform_footer input.button:hover {
+    background: #bebebe;
+    color: #000000;
+}
+
+.quotation .gform_wrapper .gform_footer input.button, 
+.quotation .gform_wrapper .gform_page_footer input.button, 
+.quotation .gform_wrapper .gform_footer input[type=submit], 
+.quotation .gform_wrapper .gform_page_footer input[type=submit] {
+    margin-top: 3rem;
+    height: 6.5rem;
+    line-height: 6.5rem;
+    font-size: 1.8rem;
+}
+
+.quotation .ginput_container.ginput_container_multiselect select {
+    height: 250px !important;
+}
+
+@media only screen and (min-width: 641px) {
+    .quotation .gform_wrapper .gform_footer input.button, 
+    .quotation .gform_wrapper .gform_page_footer input.button, 
+    .quotation .gform_wrapper .gform_footer input[type=submit], 
+    .quotation .gform_wrapper .gform_page_footer input[type=submit] {
+    width: 100%;
+}
+}
+
+/* End Quotation  Form */
+
+/* General Forms */
+
+.gform_wrapper input:not([type='radio']):not([type='checkbox']):not([type='submit']):not([type='button']):not([type='image']):not([type='file']) {
+    height: 6rem;
+    padding: 1.5rem 2rem;
+}

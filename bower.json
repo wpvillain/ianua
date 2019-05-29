@@ -1,0 +1,50 @@
+{
+  "name": "ianua",
+  "homepage": "https://ianua.imagewize.com",
+  "authors": [
+    "Jasper Frumau <jasper@imagewize.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "isotope": "^3.0.1",
+    "jquery-placeholder": "^2.3.1",
+    "jquery.fitvids": "fitvids#^1.1.0",
+    "imagesloaded": "^4.1.0",
+    "jquery-validation": "^1.15.1",
+    "google-code-prettify": "^1.0.4",
+    "magnific-popup": "^1.1.0",
+    "superfish": "^1.7.9",
+    "jquery-nice-select": "^1.1.0",
+    "raty": "^2.7.0",
+    "ajaxchimp": "^1.3.0",
+    "fallback": "^1.1.8",
+		"font-awesome": "fontawesome#^4.6.3",
+    "flexslider": "^2.6.1"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": []
+    },
+		"font-awesome": {
+      "main": []
+    },
+    "isotope": {
+      "main": "dist/isotope.pkgd.min.js",
+      "dependencies": {}
+    },
+		"jquery-nice-select": {
+      "main": "js/jquery.nice-select.js",
+      "dependencies": {}
+    },
+    "flexslider": {
+      "main": "jquery.flexslider.js"
+    },
+    "superfish": {
+      "main": [
+        "dist/js/superfish.js",
+        "dist/js/hoverIntent.js"
+      ]
+    }
+  }
+}

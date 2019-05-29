@@ -1,0 +1,44 @@
+@charset "UTF-8";
+	
+@import "common/variables";
+
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+// endbower
+
+@import "common/mixins";
+@import "common/placeholders";
+@import "common/fonts";
+@import "components/base/basic";
+@import "components/base/normalize";
+@import "components/base/reset";
+@import "common/global";
+@import "components/preloaders/preloader-1.scss";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/gravity-forms";
+@import "components/grid";
+@import "components/others";
+@import "components/woocommerce";
+@import "components/wp-classes";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages/404";
+@import "layouts/pages/about";
+@import "layouts/pages/blog";
+@import "layouts/pages/contact";
+@import "layouts/pages/home";
+@import "layouts/pages/portfolio";
+@import "layouts/pages/portfolio-single";
+@import "layouts/pages/quotation";
+@import "layouts/pages/store";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";
+@import "layouts/layout.scss";
+@import "layouts/common-styles.scss";
+@import "vendors/flexslider.scss";
+@import "vendors/magnific-popup.scss";
+@import "vendors/code-prettify/github.scss";

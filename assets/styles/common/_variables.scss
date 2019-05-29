@@ -1,0 +1,210 @@
+// -------------------------------------------------------------------
+//
+// VARIABLES & SETTINGS
+//
+// -------------------------------------------------------------------
+
+// 1. Color Pallete
+// =================================================================== */
+
+// theme color definitions
+$color-1           : #017cb6;                             // blue
+$color-2           : #c95c04;                             // orange
+$color-text        : #858585;                             // text color
+$color-body        : #13171e;                             // body background color
+$color-placeholder : lighten($color-text, 18%);
+
+// general colors
+$color-black  	: #000000; 								  // black
+$color-grey    : #ebeced; 								  // grey 
+$color-white   : #FFFFFF; 								  // white
+$color-red     : #ff6163; 								  // red
+$color-green   : #9bc724; 								  // green
+$color-blue    : #72BBF0; 								  // blue
+$color-yellow  : #ffd900;                         // yellow
+
+// notification colors
+$color-success: #6fce72;                       // green
+$color-alert  : #e4655f;                         // red
+
+// button colors
+$color-pink-button   : #FFADCB;
+$color-blue-button   : #72BBF0; 
+$color-black-button  : #2E3236;
+$color-yellow-button : #ffd900;
+$color-red-button    : #ff6163;
+$color-green-button  : #9bc724;
+$color-grey-button   : #8d8e91;
+$color-purple-button : #b482c9;
+$color-orange-button : #F5731C;
+
+// color-1 variations
+$color-1-dark: darken($color-1, 10%);
+$color-1-xdark: darken($color-1, 20%);
+$color-1-xxdark: darken($color-1, 30%);
+$color-l-light: lighten($color-1, 10%);
+
+$color-1-xlight: lighten($color-1, 20%);
+$color-1-xxlight: lighten($color-1, 30%);
+
+// color-2 variations
+$color-2-dark    : darken($color-2, 10%);
+$color-2-xdark   : darken($color-2, 20%);
+$color-2-xxdark  : darken($color-2, 30%);
+$color-2-light   : lighten($color-2, 10%);
+$color-2-xlight  : lighten($color-2, 20%);
+$color-2-xxlight : lighten($color-2, 30%);
+
+// grey variations
+$color-grey-dark   : darken($color-grey, 10%);
+$color-grey-xdark  : darken($color-grey, 15%);
+$color-grey-light  : lighten($color-grey, 10%);
+$color-grey-xlight : lighten($color-grey, 15%);
+
+// text Color variations
+$color-text-dark   : darken($color-text, 20%);
+$color-text-light  : lighten($color-text, 10%);
+$color-text-xlight : lighten($color-text, 15%);
+
+
+// 2. Fonts
+// =================================================================== */
+
+// primary
+$font-1-light              : "opensans-light";
+$font-1-light-italic       : "opensans-light-italic";
+$font-1                    : "opensans-regular";
+$font-1-italic             : "opensans-italic";
+$font-1-semibold           : "opensans-semibold";
+$font-1-semibold-italic    : "source-sans-pro-semibold-italic";
+$font-1-bold               : "opensans-bold";
+$font-1-bold-italic        : "source-sans-pro-bold-italic";
+$font-1-black              : "opensans-extrabold";
+$font-1-black-italic       : "source-sans-pro-black-italic";
+
+// secondary
+$font-2: "lato";
+$font-2-black: "lato-black";
+
+// monospace
+$font-mono: Consolas, "Andale Mono", Courier, "Courier New", monospace;
+
+// theme fonts
+$font-body: $font-1;                           // body
+$font-heading: $font-1-semibold;               // heading
+$font-button: $font-1-semibold;                // button font
+$font-button-bold: $font-1-bold;
+
+// Base Font Settings
+$base-font-size: 1.6rem;
+$base-line-height: 3rem;
+
+// 3. Grid Variables
+// =================================================================== */
+
+$max-width: 1140px; 
+$columns: 12;
+$main-sm-columns:       12;
+$sidebar-sm-columns:    4;
+
+// gutter
+$gutter: 40px;
+$gutter-small: 36px;
+$gutter-tablet: 30px;
+$gutter-mobile: 20px;
+
+// bottom
+$bottom-whole: 30px;
+$bottom-half: 15px;
+
+// define grid widths
+$grid-1: 8.33333%; 
+$grid-2: 16.66667%; 	$grid-sixth: 16.66667%;
+$grid-3: 25%; 			$grid-fourth: 25%; 
+$grid-4: 33.33333%; 	$grid-third: 33.33333%; 
+$grid-5: 41.66667%; 
+$grid-6: 50%; 			$grid-half: 50%;
+$grid-7: 58.33333%;
+$grid-8: 66.66667%; 	$grid-2thirds: 66.66667%; 
+$grid-9: 75%; 			$grid-3fourths: 75%;
+$grid-10: 83.33333%; 
+$grid-11: 91.66667%; 
+$grid-12: 100%; 		$grid-whole: 100%;
+
+
+// 4. Breakpoints
+// =================================================================== */
+
+$breakpoint-large: 1280px;     
+$breakpoint-small: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-mobile-large: 600px;
+$breakpoint-mobile-small: 400px;
+
+// grid helper tools
+// grid designer : http://grid.mindplay.dk/
+// gridr buildrr : http://gridr.atomeye.com/
+
+
+// 4. Z-Index
+// =================================================================== */
+
+$zindex-1: 500;
+$zindex-2: 600;
+$zindex-3: 700;
+$zindex-4: 800;
+$zindex-5: 900;
+
+
+// Glyphicons font path
+$icon-font-path:        "../fonts/";
+$font-path:             "../fonts/";
+
+
+//== Components
+//
+//## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
+
+$padding-base-vertical:     6px !default;
+$padding-base-horizontal:   12px !default;
+
+$padding-large-vertical:    10px !default;
+$padding-large-horizontal:  16px !default;
+
+$padding-small-vertical:    5px !default;
+$padding-small-horizontal:  10px !default;
+
+$padding-xs-vertical:       1px !default;
+$padding-xs-horizontal:     5px !default;
+
+$line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
+$line-height-small:         1.5 !default;
+
+$border-radius-base:        4px !default;
+$border-radius-large:       6px !default;
+$border-radius-small:       3px !default;
+
+//** Width of the `border` for generating carets that indicate dropdowns.
+$caret-width-base:          4px !default;
+//** Carets increase slightly in size for larger components.
+$caret-width-large:         5px !default;
+
+
+
+// 5. Media
+
+//== Thumbnails
+
+//** Padding around the thumbnail image
+$thumbnail-padding:           4px !default;
+//** Thumbnail background color
+$thumbnail-bg:                $color-body !default;
+//** Thumbnail border color
+$thumbnail-border:            #ddd !default;
+//** Thumbnail border radius
+$thumbnail-border-radius:     $border-radius-base !default;
+
+//** Custom text color for thumbnail captions
+$thumbnail-caption-color:     $color-text !default;
+//** Padding around the thumbnail caption
+$thumbnail-caption-padding:   9px !default;

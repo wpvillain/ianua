@@ -1,0 +1,78 @@
+// -------------------------------------------------------------------
+//
+// 404 STYLES
+//
+// -------------------------------------------------------------------
+
+
+/** 
+ * ===================================================================
+ * 404 - (_404.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+
+.e404 { 
+	text-align: center; 
+
+	.media-wrap {
+
+		padding: 4rem 0 3rem; 		
+
+		&:hover {
+			h1 {
+				color: $color-2;
+			}
+		}
+	}
+
+	h1 {
+		font-size: 33rem;
+		font-family: $font-1-black, sans-serif;
+		letter-spacing: .05em;
+		line-height: 1;
+		display: block;
+		@include ss-transition(all, .6s);
+		position: relative;
+		margin-top: 0px;
+	}
+
+	input { width: 100%;	}
+}
+
+#content.e404 > .content-bottom {
+	max-width: 700px;
+}
+
+
+/** 
+ * responsive:
+ * -----------
+ * 404
+ *
+ */
+
+@include ss-mq(tablet) {
+	.e404 h1 {
+		font-size: 25rem;
+	}
+}
+@include ss-mq(mobile) {
+	.e404 h1 {
+		font-size: 20rem;
+	}
+}
+@include ss-custom-mq(500px) {
+	.e404 h1 {
+		font-size: 17rem;
+	}
+}
+@include ss-mq(mobile-small) {
+	.e404 h1 {
+		font-size: 14rem;
+	}
+}
+
+
+
+

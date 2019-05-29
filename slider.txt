@@ -1,0 +1,51 @@
+			   <ul class="slides">
+
+				   <!-- slide -->
+				   <li>
+					   <div class="flex-caption">
+							<h1>Seo Fine Tuned.</h1>	
+									
+							<h3>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. </h3>	
+
+							<hr />
+
+							<div class="btn-part"> 
+								<a class="button stroke-blue smoothscroll" href="#portfolio">Our Works</a>
+								<a class="button stroke-orange smoothscroll" href="#services">Services</a>
+							</div>			   
+						</div>						
+				   </li>
+
+				   <!-- slide -->
+				   <li>
+					   <div class="flex-caption">
+							<h1>Responsive Web Design.</h1>	
+									
+							<h3>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. </h3>	
+
+							<hr />
+
+							<div class="btn-part"> 
+								<a class="button stroke-blue smoothscroll" href="#about">About Us</a>
+								<a class="button stroke-orange smoothscroll" href="#services">Services</a>
+							</div>			   
+						</div>						
+				   </li>
+
+				   <!-- slide -->
+				   <li>
+					   <div class="flex-caption">
+							<h1>Wordpress Development.</h1>	
+									
+							<h3>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. </h3>	
+
+							<hr />
+
+							<div class="btn-part"> 
+								<a class="button stroke-blue smoothscroll" href="#portfolio">Our Works</a>
+								<a class="button stroke-orange smoothscroll" href="#services">Services</a>
+							</div>			   
+						</div>						
+				   </li>					   				              
+
+				</ul>

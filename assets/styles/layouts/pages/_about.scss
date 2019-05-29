@@ -1,0 +1,52 @@
+// -------------------------------------------------------------------
+//
+// ABOUT
+//
+// -------------------------------------------------------------------
+
+
+/** 
+ * ===================================================================
+ * about page - (_about.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+
+.profile {
+	margin-bottom: 50px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #e1e1e1;
+
+	.profile-pic {
+		max-width: 200px;
+		margin: 1rem 0 2rem;
+		float: left;
+	}
+
+	.desc {
+		padding-left: 240px;
+	}
+
+	@include ss-custom-mq(700px) {
+
+		.profile-pic {
+			float: none;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 300px;			
+		}
+
+		.desc {
+			padding-left: 0;
+		}
+
+	}
+}
+
+@include ss-mq(tablet) {
+
+	.about-header {
+		text-align: center;
+	}
+
+}

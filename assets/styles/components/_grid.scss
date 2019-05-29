@@ -1,0 +1,320 @@
+// -------------------------------------------------------------------
+//
+// GRID
+//
+// -------------------------------------------------------------------
+
+/** 
+ * ===================================================================
+ * grid - (_grid.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+
+.row {
+   width: 94%;
+   max-width: $max-width;
+   margin: 0 auto;
+}
+
+.row .row { 
+	width: auto; 
+	max-width: none; 
+	margin-left: ($gutter/2 * -1); 
+	margin-right: ($gutter/2 * -1);
+}
+
+// row clearing
+.row {
+   @include ss-clearfix;
+}
+
+// block grids and columns
+.column, .columns, .bgrid  {
+   position: relative;   
+   min-height: 1px;
+   float: left;
+}
+.column, .columns {
+	padding: 0 ($gutter/2);
+}
+.column.centered, .columns.centered  {
+   float: none;
+   margin: 0 auto;
+}
+
+// removed gutters 
+.row.collapsed > .column,
+.row.collapsed > .columns,
+.column.collapsed, .columns.collapsed  { padding: 0; }
+
+// [class*="column"] + [class*="column"]:last-child { float: right; }
+[class*="column"] + [class*="column"].end { float: right; }
+
+// column widths 
+.one, .row .one        { width: $grid-1; }
+.two, .row .two        { width: $grid-2; }
+.three, .row .three    { width: $grid-3; }
+.four, .row .four      { width: $grid-4; }
+.five, .row .five      { width: $grid-5; }
+.six, .row .six        { width: $grid-6; }
+.seven, .row .seven    { width: $grid-7; }
+.eight, .row .eight    { width: $grid-8; }
+.nine, .row .nine      { width: $grid-9; }
+.ten, .row .ten        { width: $grid-10; }
+.eleven, .row .eleven  { width: $grid-11; }
+.twelve, .row .twelve  { width: $grid-12; }
+
+
+/**
+ * small screens (_grid.scss)
+ * --------------------------------------------------------------- 
+ */
+
+@media screen and (max-width: $breakpoint-small) {
+
+	.row .row {
+		margin-left: ($gutter-small/2 * -1); 
+		margin-right: ($gutter-small/2 * -1);
+	}
+
+	.column, .columns {	   
+	   padding: 0 ($gutter-small/2);	   
+	}
+
+}
+
+/**
+ * tablets (_grid.scss)
+ * --------------------------------------------------------------- 
+ */
+
+@media screen and (max-width: $breakpoint-tablet) {
+
+   .row {
+   	width: auto;
+	   padding-left: 30px;
+   	padding-right: 30px;      
+	}
+   .row .row { 
+     	padding-left: 0;
+   	padding-right: 0;
+   	margin-left: ($gutter-tablet/2 * -1);
+   	margin-right: ($gutter-tablet/2 * -1);
+   }
+   .column, .columns {	   
+	   padding: 0 ($gutter-tablet/2);	   
+	}
+
+	// tab column widths
+	.tab-fourth, .row .tab-fourth  { width: $grid-fourth; }
+	.tab-third, .row .tab-third  { width: $grid-third; }
+	.tab-half, .row .tab-half  { width: $grid-half; }
+	.tab-2thirds, .row .tab-2thirds  { width: $grid-2thirds; }
+	.tab-3fourths, .row .tab-3fourths  { width: $grid-3fourths; }
+	.tab-whole, .row .tab-whole  { width: $grid-whole; }
+
+}
+
+/**
+ * large mobile devices (_grid.scss)
+ * --------------------------------------------------------------- 
+ */
+
+@media screen and (max-width: $breakpoint-mobile-large) {
+
+	.row {
+   	padding-left: 25px;
+   	padding-right: 25px;      
+	}
+	.row .row { 
+     	margin-left: ($gutter-mobile/2 * -1);
+     	margin-right: ($gutter-mobile/2 * -1);
+   }	
+   .column, .columns {	   
+	   padding: 0 ($gutter-mobile/2);	   
+	}
+
+ 	// mobile column widths
+	.mob-fourth, .row .mob-fourth  { width: $grid-fourth; }
+	.mob-half, .row .mob-half  { width: $grid-half; }
+	.mob-3fourths, .row .mob-3fourths  { width: $grid-3fourths; }
+	.mob-whole, .row .mob-whole  { width: $grid-whole; }
+
+}
+
+/**
+ * small mobile devices (_grid.scss)
+ * --------------------------------------------------------------- 
+ */
+
+@media screen and (max-width: $breakpoint-mobile-small) {
+
+	// .row {
+   //   	padding-left: 30px;
+   //   	padding-right: 30px;  
+   // }
+
+   .row .row { 
+     	padding-left: 0;
+   	padding-right: 0;
+   	margin-left: 0;
+   	margin-right: 0;
+   }	
+	.column,	.columns {
+	   @include ss-stack;
+	   padding: 0;
+   }
+
+   [class*="column"] + [class*="column"]:last-child { float: none; } 
+	
+}
+
+
+/** 
+ * ===================================================================
+ * block grids - (_grid.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+
+.bgrid-sixth .bgrid  { width: $grid-sixth; }
+.bgrid-fourth .bgrid { width: $grid-fourth; }
+.bgrid-third .bgrid  { width: $grid-third; }
+.bgrid-half .bgrid   { width: $grid-half; }
+
+/**
+ * Clearing for block grid columns. Allow columns with 
+ * different heights to align properly.
+ */
+
+.bgrid-sixth .bgrid:nth-child(6n+1), 
+.bgrid-fourth .bgrid:nth-child(4n+1), 
+.bgrid-third .bgrid:nth-child(3n+1), 
+.bgrid-half .bgrid:nth-child(2n+1) { clear: both; }
+
+
+/**
+ * small screens (_grid.scss)
+ * --------------------------------------------------------------- 
+ */
+
+@media screen and (max-width: $breakpoint-small) {
+
+   .s-bgrid-sixth .bgrid   { width: $grid-sixth; }
+	.s-bgrid-fourth .bgrid  { width: $grid-fourth; }
+	.s-bgrid-third .bgrid   { width: $grid-third; }
+	.s-bgrid-half .bgrid    { width: $grid-half; }
+	.s-bgrid-whole .bgrid   { width: $grid-whole; clear: both; }
+
+   [class*="bgrid-"] .bgrid:nth-child(n) { clear: none; }	
+
+	.s-bgrid-sixth .bgrid:nth-child(6n+1),
+	.s-bgrid-fourth .bgrid:nth-child(4n+1),
+	.s-bgrid-third .bgrid:nth-child(3n+1),
+	.s-bgrid-half .bgrid:nth-child(2n+1) { clear: both; }
+
+}
+
+/**
+ * tablets (_grid.scss)
+ * --------------------------------------------------------------- 
+ */
+
+@media screen and (max-width: $breakpoint-tablet) {
+
+	.tab-bgrid-sixth .bgrid   { width: $grid-sixth; }
+	.tab-bgrid-fourth .bgrid  { width: $grid-fourth; }
+	.tab-bgrid-third .bgrid   { width: $grid-third; }
+	.tab-bgrid-half .bgrid    { width: $grid-half; }
+	.tab-bgrid-whole .bgrid   { width: $grid-whole; clear: both; }
+
+   [class*="tab-bgrid-"] .bgrid:nth-child(n) { clear: none; }
+
+	.tab-bgrid-sixth .bgrid:nth-child(6n+1),
+	.tab-bgrid-fourth .bgrid:nth-child(4n+1),
+	.tab-bgrid-third .bgrid:nth-child(3n+1),
+	.tab-bgrid-half .bgrid:nth-child(2n+1) { clear: both; }
+
+}
+
+/**
+ * large mobile devices (_grid.scss)
+ * --------------------------------------------------------------- 
+ */
+
+@media screen and (max-width: $breakpoint-mobile-large) {
+
+	.mob-bgrid-sixth .bgrid   { width: $grid-sixth; }
+	.mob-bgrid-fourth .bgrid  { width: $grid-fourth; }
+	.mob-bgrid-third .bgrid   { width: $grid-third; }
+	.mob-bgrid-half .bgrid    { width: $grid-half; }
+	.mob-bgrid-whole .bgrid   { width: $grid-whole; clear: both; }
+
+   [class*="mob-bgrid-"] .bgrid:nth-child(n) { clear: none; }
+
+	.mob-bgrid-sixth .bgrid:nth-child(6n+1),
+	.mob-bgrid-fourth .bgrid:nth-child(4n+1),
+	.mob-bgrid-third .bgrid:nth-child(3n+1),
+	.mob-bgrid-half .bgrid:nth-child(2n+1) { clear: both; }
+
+}
+
+/**
+ * stack on small mobile devices (_grid.scss)
+ * --------------------------------------------------------------- 
+ */
+
+@media screen and (max-width: $breakpoint-mobile-small) {
+
+	.stack .bgrid {
+		@include ss-stack; 		 
+	}
+
+}
+
+
+/** 
+ * ===================================================================
+ * MISC - (_grid.scss) 
+ *
+ * ------------------------------------------------------------------- 
+ */
+
+/**
+ * Clearing - (http://nicolasgallagher.com/micro-clearfix-hack/
+ * -
+ */
+
+.group {
+   @include ss-clearfix;
+}
+
+/**
+ * Misc Helper Styles 
+ * -
+ */
+
+.hide { display: none; }
+.invisible { visibility: hidden; }
+.antialiased {
+  	@include ss-antialiased;
+ } 
+
+.remove-bottom { margin-bottom: 0; }
+.half-bottom { margin-bottom: $bottom-half !important; }
+.add-bottom { margin-bottom: $bottom-whole !important; }
+.no-border { border: none; }
+.full-width { width: 100%; }
+
+.text-center  { text-align: center; }
+.text-left    { text-align: left; }
+.text-right   { text-align: right; }
+.pull-left    { float: left; }
+.pull-right   { float: right; }
+.align-center {
+   margin-left: auto;
+   margin-right: auto;
+   text-align: center;
+}
+

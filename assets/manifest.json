@@ -1,0 +1,35 @@
+{
+  "dependencies": {
+    "main.js": {
+      "files": [
+        "scripts/map.js",
+        "scripts/wc-quantity-increments.js",
+				"scripts/main.js"
+      ],
+      "main": true
+    },
+    "main.css": {
+      "files": [
+        "styles/main.scss",
+        "../../../plugins/gravityforms/css/formsmain.min.css",
+        "../../../plugins/gravityforms/css/browsers.min.css",
+        "../../../plugins/gravityforms/css/forms.min.css",
+        "../../../plugins/gravityforms/css/readyclass.min.css",
+        "../../../plugins/gravityforms/css/reset.min.css",
+        "../../../plugins/gravityforms/css/rtl.min.css"
+      ],
+      "main": true
+    },
+    "customizer.js": {
+      "files": [
+        "scripts/customizer.js"
+      ]
+    },
+    "jquery.js": {
+      "bower": ["jquery"]
+    }
+  },
+  "config": {
+    "devUrl": "https://ianua.dev/"
+  }
+}

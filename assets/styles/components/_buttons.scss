@@ -1,0 +1,198 @@
+// -------------------------------------------------------------------
+//
+// BUTTONS
+//
+// -------------------------------------------------------------------
+
+/** 
+ * ===================================================================
+ * buttons - (_buttons.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+
+.button, 
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	display: inline-block;  
+   font-family: $font-button-bold, sans-serif;
+   font-size: $base-font-size;
+   height: 5rem;
+   line-height: 5rem;
+   padding: 0 3rem;
+	margin: 0 .3rem 1rem 0;
+	background: lighten(#bebebe, 10%);   
+   color: #252525;    
+	text-decoration: none;   
+   cursor: pointer;
+   text-align: center;
+   white-space: nowrap;
+   border: none;
+   border-radius: 3px;
+   @include ss-transition(all, .5s);
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:focus,
+button:focus,
+input[type="submit"]:focus,
+input[type="reset"]:focus,
+input[type="button"]:focus {
+   background: #bebebe;   
+   color: $color-black; 
+   outline: 0;   
+}
+
+// Button primary 
+.button.button-primary,
+button.button-primary,
+input[type="submit"].button-primary,
+input[type="reset"].button-primary,
+input[type="button"].button-primary { 
+	background: $color-1; 
+	color: $color-white;
+}
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+	background: darken($color-1, 7%); 	
+}
+
+button.full-width, .button.full-width {
+	width: 100%;
+	margin-right: 0;
+}
+
+button.medium, .button.medium  {
+	height: 5.5rem !important;
+   line-height: 5.5rem !important;
+	padding: 0 1.8rem !important;
+}
+button.large, .button.large {
+	height: 6rem !important;
+   line-height: 6rem !important;
+	padding: 0rem 2rem !important;		
+}
+button.round, .button.round {
+	padding-left: 2rem !important;
+	padding-right: 2rem !important; 
+	border-radius: 1000px;
+}
+button.stroke, .button.stroke {
+  background: transparent !important;
+  border: 3px solid transparent;
+}
+
+// Button colors 
+.button.pink { background: $color-pink-button; }
+.button.pink:hover { background: darken($color-pink-button, 5%); }
+.button.blue { background: $color-blue-button; }
+.button.blue:hover { background: darken($color-blue-button, 5%); }
+.button.black { background: $color-black-button; }
+.button.black:hover { background: darken($color-black-button, 5%); }		 
+.button.yellow { background: $color-yellow-button; }
+.button.yellow:hover { background: darken($color-yellow-button, 3%); }	 	 	 
+.button.red { background: $color-red-button; }
+.button.red:hover { background: darken($color-red-button, 5%); }		 	 
+.button.green { background: $color-green-button; }
+.button.green:hover { background: darken($color-green-button, 5%); }	
+.button.grey { background: $color-grey-button; }
+.button.grey:hover { background: darken($color-grey-button, 5%); }
+.button.purple { background: $color-purple-button; }
+.button.purple:hover { background: darken($color-purple-button, 5%); }	
+.button.orange { background: $color-orange-button; }
+.button.orange:hover { background-color: darken($color-orange-button, 5%); }
+
+//stroke button colors
+.button.stroke.pink {
+	border-color: $color-pink-button;
+	color: $color-pink-button;
+}
+.button.stroke.pink:hover {
+	background: $color-pink-button !important;
+	color: #fff;
+}
+.button.stroke.blue {
+	border-color: $color-blue-button;
+	color: $color-blue-button;
+}
+.button.stroke.blue:hover {
+	background: $color-blue-button !important;
+	color: #fff;
+}
+.button.stroke.black {
+	border-color: $color-black-button;
+	color: $color-black-button;
+}
+.button.stroke.black:hover {
+	background: $color-black-button !important;
+	color: #fff;
+}
+.button.stroke.yellow {
+	border-color: $color-yellow-button;
+	color: $color-yellow-button;
+}
+.button.stroke.yellow:hover {
+	background: $color-yellow-button !important;
+	color: #fff;
+}
+.button.stroke.red {
+	border-color: $color-red-button;
+	color: $color-red-button;
+}
+.button.stroke.red:hover {
+	background: $color-red-button !important;
+	color: #fff;
+}
+.button.stroke.green {
+	border-color: $color-green-button;
+	color: $color-green-button;
+}
+.button.stroke.green:hover {
+	background: $color-green-button !important;
+	color: #fff;
+}
+.button.stroke.grey {
+	border-color: $color-grey-button;
+	color: $color-grey-button;
+}
+.button.stroke.grey:hover {
+	background: $color-grey-button !important;
+	color: #fff;
+}
+.button.stroke.purple {
+	border-color: $color-purple-button;
+	color: $color-purple-button;
+}
+.button.stroke.purple:hover {
+	background: $color-purple-button !important;
+	color: #fff;
+}
+.button.stroke.orange {
+	border-color: $color-orange-button;
+	color: $color-orange-button;
+}
+.button.stroke.orange:hover {
+	background: $color-orange-button !important;
+	color: #fff;
+}
+
+// Fix for odd Mozilla border & padding issues ??? - check this later
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}

@@ -1,0 +1,214 @@
+// -------------------------------------------------------------------
+//
+// MIXINS
+//
+// -------------------------------------------------------------------
+
+// 
+// 1. CSS3 
+// =================================================================== */
+
+// transition
+@mixin ss-transition( $what: all, $length: 1s, $easing: ease-in-out ) {
+  	-moz-transition    : $what $length $easing;
+  	-o-transition      : $what $length $easing;
+  	-webkit-transition : $what $length $easing;
+  	-ms-transition     : $what $length $easing;
+  	transition         : $what $length $easing;
+}
+
+// transform
+@mixin ss-transform( $transforms ) {
+  	-webkit-transform : $transforms;
+  	-ms-transform     : $transforms;
+  	transform         : $transforms;
+}
+
+// box-sixing 
+@mixin ss-box-sizing( $type: border-box ) {
+  	-webkit-box-sizing : $type;
+  	-moz-box-sizing    : $type;
+  	box-sizing         : $type;
+}
+
+// columns
+@mixin ss-columns( $count: 3, $gap: 10 ) {
+  	-webkit-column-count : $count;
+  	-moz-column-count    : $count;
+  	column-count         : $count;
+
+  	-webkit-column-gap : $gap;
+  	-moz-column-gap    : $gap;
+  	column-gap         : $gap;
+}
+
+// animation and keyframes
+@mixin ss-keyframes( $animation-name ) {
+  	@-webkit-keyframes $animation-name {
+  	  	@content;
+  	}
+  	@keyframes $animation-name {
+    	@content;
+  	}
+}
+
+@mixin ss-animation( $str ) {
+  	-webkit-animation: #{$str};
+  	animation:         #{$str};  
+}
+
+// background size
+@mixin ss-background-size( $str ) {
+	-webkit-background-size: #{$str};
+	-moz-background-size: 	 #{$str};
+	background-size:         #{$str};
+}
+
+// hi resolution images / retinize
+// ------------------------------------------------------------------ */
+$is-hidpi:" (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi) ";
+ 
+       
+@mixin ss-retinize( $file, $type, $width, $height, $path: "/images/" ) {
+  	background-image: url($path + $file + '.' + $type);
+  
+  	@media #{$is-hidpi} {
+    	& {
+      	background-image: url($path + $file + '-@2x.' + $type);
+      	@include ss-background-size($width $height);      
+    	}
+  	}
+}
+
+// Breakpoints
+@mixin ss-mq( $point ) {
+  	@if $point == large {
+    	@media only screen and (max-width: $breakpoint-large) {	
+    		@content; 
+    	}
+  	}
+  	@else if $point == small {
+    	@media only screen and (max-width: $breakpoint-small) { 
+    		@content;
+    	}
+  	}
+  	@else if $point == tablet {
+    	@media only screen and (max-width: $breakpoint-tablet)	{ 
+    		@content; 
+    	}
+  	}
+  	@else if $point == mobile {
+    	@media only screen and (max-width: $breakpoint-mobile-large)	{ 
+    		@content; 
+    	}
+  	}
+  	@else if $point == mobile-small {
+   	@media only screen and (max-width: $breakpoint-mobile-small)	{ 
+   		@content; 
+   	}
+  	}	
+}
+
+@mixin ss-custom-mq( $breakpoint ) {
+   @media only screen and (max-width: #{$breakpoint} ) { 
+   	@content; 
+   }  
+}
+
+
+// 
+// 2. HELPER UTILITIES 
+// =================================================================== */
+
+// Clearfix
+@mixin ss-clearfix {
+  	&:before,
+  	&:after {
+      content: "";
+      display: table;
+  	}
+  	&:after {
+      clear: both;
+  	}
+}
+
+// Center-align a block level element
+@mixin ss-center-block {
+  	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+}
+
+// Remove padding and margin
+@mixin ss-total-collapse {
+	margin: 0;
+	padding: 0;
+}
+
+// stack columns and grids
+@mixin ss-stack {
+	width: 100% !important;      
+	float: none !important;
+	clear: both !important;
+	margin-left: 0;
+	margin-right: 0; 	
+}
+
+// rem size
+@function ss-calculate-rem($size, $context: $base-font-size) {
+  	$remSize: $size / $context;
+  	@return $remSize * 1rem;
+}
+
+@mixin ss-font-size($size) {
+  	font-size: $size;
+  	font-size: ss-calculate-rem($size);
+}
+
+@mixin ss-property-size($property, $size) {
+	#{$property}: $size;
+	#{$property}: ss-calculate-rem($size);
+}
+
+// Hide text
+@mixin ss-hide-text {
+  	font: 0/0 a; 
+  	text-shadow: none;
+  	color: transparent;
+}
+
+// Image Replacement
+@mixin ss-image-replacement {
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+// cover everything block
+@mixin ss-coverer {
+  	position: fixed;
+  	top: 0;
+  	left: 0;
+  	width: 100%;
+  	height: 100%;
+}
+
+// Text Overflow - An easy way to truncate text with an ellipsis. Requires the 
+// element to be block or inline-block.
+@mixin ss-text-truncate {
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  	white-space: nowrap;
+}
+
+// antialiased
+@mixin ss-antialiased {
+  	-webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin gfcalc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}

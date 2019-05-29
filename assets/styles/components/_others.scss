@@ -1,0 +1,485 @@
+// -------------------------------------------------------------------
+//
+// OTHER COMPONENTS
+//
+// -------------------------------------------------------------------
+
+/** 
+ * ===================================================================
+ * other components - (_others.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+
+
+/**
+ * alert box (_others.scss)
+ * ------------------------------------------------------------------- 
+ */
+
+.alert-box {
+	padding: 2rem 4rem 2rem 3rem;
+	position:relative;
+	margin-bottom: $base-line-height;
+	border-radius: 3px;
+	font-family: $font-1, sans-serif;
+
+	.close { 
+		position:absolute; 
+		right: 18px; 
+		top: 18px; 
+		cursor:pointer; 
+	}
+}
+.iw-error {
+	background-color: lighten($color-red, 22%); 
+	color: desaturate(darken($color-red, 8%), 25%);
+}
+.iw-success {
+	background-color: lighten($color-green, 22%); 
+	color: desaturate(darken($color-green, 8%), 25%);
+}
+.iw-info {
+	background-color: lighten($color-blue, 22%); 
+	color: desaturate(darken($color-blue, 15%), 25%);
+}
+.iw-notice {
+	background-color: lighten($color-yellow, 30%); 
+	color: desaturate(darken($color-yellow, 8%), 25%);
+}
+
+
+/**
+ * drop cap (_others.scss)
+* ------------------------------------------------------------------- 
+ */
+
+.drop-cap:first-letter {
+	float: left;
+	margin: 0;
+	padding: 14px 6px 0 0;
+	font-size: 84px;
+	font-family: $font-1-bold, sans-serif;
+   line-height: 60px;
+	text-indent: 0;
+	background: transparent;
+	color: #252525;
+}
+
+/**
+ * line definition style (_others.scss)
+* ------------------------------------------------------------------- 
+ */
+
+.lining { 
+	dt, dd {
+		display: inline;
+		margin: 0;
+	}
+
+	dt + dt:before,
+	dd + dt:before {
+		content: "\A";
+		white-space: pre;
+	}
+
+	dd + dd:before {
+		content: ", ";
+	}
+
+	dd + dd:before {
+		content: ", ";
+	}
+	dd:before {
+		content: ": ";
+		margin-left: -0.2em;
+	}
+}
+
+/**
+ * dictionary definition style (_others.scss)
+* ------------------------------------------------------------------- 
+ */
+
+.dictionary-style {
+	dt {
+		display: inline;
+		counter-reset: definitions;
+	}
+
+	dt + dt:before {
+		content: ", ";
+		margin-left: -0.2em;
+	}
+	dd {
+		display: block;
+		counter-increment: definitions;
+	}
+	dd:before {
+		content: counter(definitions, decimal) ". ";
+	}
+}
+
+
+/** 
+/*  Pull Quotes Markup
+/*
+    <aside class="pull-quote">
+		<blockquote>
+			<p></p>
+		</blockquote>
+	 </aside>
+/*
+/* --------------------------------------------------------------------- */
+
+.pull-quote {
+   position: relative;
+	padding: 2rem 3rem 2rem 0px;
+
+	&:before,
+	&:after {
+		height: 1em;
+		position: absolute;
+		font-size: 80px;
+	   font-family: Arial, Sans-Serif;
+	   color: #333;
+	}
+	&:before {
+		content: "\201C";
+		top:  33px;
+		left: 0;
+	}
+	&:after {
+		content: '\201D';
+		bottom: -33px;
+		right: 0;
+	}
+	blockquote {
+	   margin: 0;
+	}
+	blockquote:before {
+	   content: none;
+	}
+}
+
+
+/* 
+/*  Stats Tab Markup
+
+    <ul class="stats-tabs">
+		<li><a href="#">[value]<em>[name]</em></a></li>
+	 </ul>
+
+    Extend this object into your markup.
+/*
+/* --------------------------------------------------------------------- */
+
+.stats-tabs {
+   padding: 0;
+   margin: 3rem 0;
+
+   li {
+		display: inline-block;
+		margin: 0 1.5rem 3rem 0;
+		padding: 0 1.5rem 0 0;
+		border-right: 1px solid #ccc;
+	}
+	li:last-child {
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+	li a {
+		display: inline-block;
+		font-size: 2.5rem;
+		font-family: $font-1-bold, sans-serif;
+	   border: none;
+	   color: #252525;
+	}
+	li a:hover {
+	   color: $color-1;
+	}
+	li a em {
+		display: block;
+		margin: .6rem 0 0 0;
+		font-size: 1.4rem;
+		font-family: $font-1, sans-serif;
+	   color: $color-text-light;
+	}
+}
+
+
+/**
+ * pagination (_others.scss)
+ * ------------------------------------------------------------------- 
+ */
+
+.pagination,
+.woocommerce-pagination {
+	border-top: 1px solid #e5e5e5;
+ 	margin: 5rem auto;
+ 	padding: 5rem 3rem;
+   text-align: center;
+   clear: both; 
+}
+
+.pagination .page-numbers,
+.woocommerce-pagination .page-numbers {
+    list-style: none;
+    margin: 0; 
+}
+
+.pagination .page-numbers::after,
+.woocommerce-pagination .page-numbers::after {
+   clear: both;
+   content: "";
+   display: table; 
+}
+    
+.pagination .page-numbers li,
+.woocommerce-pagination .page-numbers li {
+   display: inline-block; 
+   margin: 0;
+   padding: 0;
+}
+      
+.pagination .page-numbers li .page-numbers,
+.woocommerce-pagination .page-numbers li .page-numbers {
+	font-family: $font-1-bold, sans-serif;
+	border-left-width: 0;
+   display: inline-block;
+   font-size: 16px;
+   line-height: 24px;
+   height: 36px;
+   padding: 6px 12px;
+   margin-right: 3px;
+   margin-bottom: 6px;
+   border-radius: 3px;
+   color: $color-text-dark;
+   background-color: darken($color-grey, 5%); 
+
+   @include ss-transition(all, .3s);
+}
+        
+.pagination .page-numbers li .page-numbers.current,
+.woocommerce-pagination .page-numbers li .page-numbers.current {
+   font-weight: $font-1-bold, sans-serif;
+   background-color: $color-1;
+   border-color: $color-1;
+   color: #fff; 
+}
+        
+.pagination .page-numbers li .page-numbers.dots,
+.woocommerce-pagination .page-numbers li .page-numbers.dots {
+   background-color: transparent; 
+}
+        
+.pagination .page-numbers li .page-numbers.prev,
+.pagination .page-numbers li .page-numbers.next,
+.woocommerce-pagination .page-numbers li .page-numbers.prev,
+.woocommerce-pagination .page-numbers li .page-numbers.next {
+   padding-left: 1.6rem;
+   padding-right: 1.6rem;    
+}
+
+.pagination .page-numbers li a.page-numbers:hover,
+.woocommerce-pagination .page-numbers li a.page-numbers:hover {
+   background: darken($color-grey, 30%);
+   color: white;
+}
+
+.rtl .pagination a.next,
+.rtl .pagination a.prev,
+.rtl .woocommerce-pagination a.next,
+.rtl .woocommerce-pagination a.prev {
+  	@include ss-transform(rotateY(180deg)); 
+}
+
+
+/**
+ * tab (_others.scss)
+ * ------------------------------------------------------------------- 
+ */
+
+.tabs-container {
+	margin: 3rem 0;
+
+	@include ss-clearfix;
+}
+
+ul.tabs {
+  	margin: 0;
+  	padding: 0;
+	float: left;
+	list-style: none;
+	width: 100%;	
+}
+
+ul.tabs li {
+	font-family: $font-1-bold, sans-serif;
+	float: left;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+	margin: 0 1rem 0 0;
+	background: #ddd;
+	cursor: pointer;
+	border-radius: 2px;
+	padding: 1.5rem 3rem;
+	font-size: 1.2rem;
+	overflow: hidden;
+	position: relative;
+
+	@include ss-transition(all, .3s);
+
+	@include ss-mq(mobile) {
+		padding: 1.5rem 2rem;
+	}
+}
+
+ul.tabs li:hover,
+ul.tabs li.active {
+	color: #fff;
+  	background: #171b23;
+}
+
+.tab-container {
+	clear: both;
+	float: left;
+	width: 100%;
+	min-height: 20rem;
+	height: auto;
+}
+
+.tab-content {
+  	padding: 2rem 0;
+  	display: none;
+}
+
+
+/**
+ * accordion (_others.scss)
+ * ------------------------------------------------------------------- 
+ */
+
+.accordion-container {
+	margin: 3rem 0;
+}
+
+.accordion-header {
+	background: #171b23;
+	display: block;
+	font-size: 1.2rem;
+	font-family: $font-1-bold, sans-serif;
+	margin: 0;
+	padding: 1.5rem 3rem;
+	border-radius: 2px;
+	cursor: pointer;
+	color: $color-white;
+	text-transform: uppercase;
+	letter-spacing: .1rem;
+
+	@include ss-transition(all, .3s);
+}
+
+.active-header {
+	color: $color-white;
+}
+
+.inactive-header {
+	color: #171b23;;
+	background: #ddd;
+	margin-bottom: 1rem;
+}
+
+.inactive-header:hover {
+	color: $color-white;
+	background: #171b23;
+}
+
+.accordion-content {
+	display: none;
+	padding: 2rem 0;
+	border-top: 0;
+}
+
+
+/**
+ * pricing tables (_others.scss)
+ * ------------------------------------------------------------------- 
+ */
+
+.pricing-tables {
+
+	margin-bottom: 3rem;
+	text-align: center;
+
+	@include ss-mq(tablet) {
+		padding-left: ($gutter-tablet/2);
+		padding-right: ($gutter-tablet/2);
+	}
+	@include ss-mq(mobile) {
+		padding-left: ($gutter-mobile/2);
+		padding-right: ($gutter-mobile/2);
+	}
+	@include ss-mq(mobile-small) {
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.price-block {
+
+		padding: 4rem 0;
+		margin-bottom: 1.5rem;
+		
+		&.primary {
+			background: #171b23;
+			color: lighten(#171b23, 60%);
+
+			.plan-title, .plan-price {
+				color: $color-white;
+			}
+			.features {
+				border-top: 1px solid lighten(#171b23, 10%);
+			}
+			.button {
+				color: #171b23;
+				background: $color-white;
+			}
+		}
+
+	}
+
+	.plan-price {
+		font-size: 4rem;
+		font-family: $font-1-bold, sans-serif;
+		color: #252525;
+		margin: 3rem 0 1.5rem;
+
+		sup {
+			font-size: 2.5rem;
+			top: -1rem;
+			margin-right: 3px;
+		}
+	}
+
+	.features {
+		border-top: 1px solid #e1e1e1;
+		font-size: 1.5rem;
+		margin: 3rem;
+		padding-top: 2rem;
+
+		li {
+			list-style: none;
+			padding: 0;
+		}
+
+	}
+
+	.button {
+		display: block;
+		margin: 4rem 4.5rem 1rem;
+		background: #171b23;
+		color: $color-white;
+	}
+
+}

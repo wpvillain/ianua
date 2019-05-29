@@ -1,0 +1,59 @@
+// -------------------------------------------------------------------
+//
+// Quotation Styles
+//
+// -------------------------------------------------------------------
+
+/** 
+ * ===================================================================
+ * quotation - (_quotation.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+
+.iw-quotation {
+
+	#quotationForm {
+		margin: 4rem 0;
+	}
+
+	.iw-input-blocks {
+		height: 280px;
+	}
+
+	.submit-button {
+		margin-top: 3rem;
+		height: 6.5rem;
+		line-height: 6.5rem;
+		font-size: 1.8rem;
+	}
+
+	input[type="email"],
+	input[type="number"],
+	input[type="search"],
+	input[type="text"],
+	input[type="tel"],
+	input[type="url"],
+	input[type="password"],
+	textarea,
+	select,
+	.niceselect {
+		width: 100%;
+	}
+}
+
+
+/**
+ * responsive:
+ * -----------
+ * quotation
+ *
+ */
+
+@include ss-mq(tablet) {
+
+	.quotation-intro {
+		text-align: center;
+	}
+
+}

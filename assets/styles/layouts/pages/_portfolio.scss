@@ -1,0 +1,80 @@
+// -------------------------------------------------------------------
+//
+// PORFOLIO LISTING STYLES
+//
+// -------------------------------------------------------------------
+
+/** 
+ * ===================================================================
+ * portfolio listing page - (_portfolio.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+
+.project-list .items {
+	margin-bottom: 3rem;
+}
+
+.project-filter {
+	border-top: 1px solid #e1e1e1;
+	text-align: center;
+
+	ul {
+		position: relative;
+		top: -.1rem;
+		margin-left: 0;
+	}
+
+	li {
+		list-style: none;
+		padding: 0;
+		display: inline-block;
+
+		a {
+			color: $color-text-light;
+			display: block;
+			padding: 0 1.2rem;
+			height: 5rem;
+			line-height: 4.7rem;
+			border-top: .3rem solid transparent;
+		}
+
+		.active {
+			color: #252525;
+			border-color: #252525;
+		}
+	}
+}
+
+/**
+ * responsive:
+ * -----------
+ * portfolio listing
+ *
+ */
+
+@include ss-mq(tablet) {
+
+	.project-intro {
+		text-align: center;
+	}
+
+	.project-filter {
+
+		ul { margin-top: 1rem}
+
+		li a {
+			border-top: none;
+			border-bottom: .3rem solid transparent;
+			padding: 0 1rem;
+			height: 4rem;
+			line-height: 3.7rem;
+		}
+	}
+
+}
+
+
+
+
+
