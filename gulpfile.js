@@ -166,7 +166,7 @@ var writeToManifest = function(directory) {
 // `gulp styles` - Compiles, combines, and optimizes Bower CSS and project CSS.
 // By default this task will only log a warning if a precompiler error is
 // raised. If the `--production` flag is set: this task will fail outright.
-gulp.task('styles',  function() { return gulp.series(['wiredep'], function() {
+gulp.task('styles', ['wiredep'], function() {
   var merged = merge();
   manifest.forEachDependency('css', function(dep) {
     var cssTasksInstance = cssTasks(dep.name);
@@ -181,12 +181,12 @@ gulp.task('styles',  function() { return gulp.series(['wiredep'], function() {
   });
   return merged
     .pipe(writeToManifest('styles'));
-})});
+});
 
 // ### Scripts
 // `gulp scripts` - Runs JSHint then compiles, combines, and optimizes Bower JS
 // and project JS.
-gulp.task('scripts', function() { return gulp.series(['jshint'], function() {
+gulp.task('scripts', ['jshint'], function() {
   var merged = merge();
   manifest.forEachDependency('js', function(dep) {
     merged.add(
@@ -196,7 +196,7 @@ gulp.task('scripts', function() { return gulp.series(['jshint'], function() {
   });
   return merged
     .pipe(writeToManifest('scripts'));
-  })});
+});
 
 // ### Fonts
 // `gulp fonts` - Grabs all the fonts and outputs them in a flattened directory
@@ -251,11 +251,11 @@ gulp.task('watch', function() {
       blacklist: ['/wp-admin/**']
     }
   });
-  gulp.watch([path.source + 'styles/**/*'], gulp.series('styles'));
-  gulp.watch([path.source + 'scripts/**/*'], gulp.series('jshint', 'scripts'));
-  gulp.watch([path.source + 'fonts/**/*'], gulp.series('fonts'));
-  gulp.watch([path.source + 'images/**/*'], gulp.series('images'));
-  gulp.watch(['bower.json', 'assets/manifest.json'], gulp.series('build'));
+  gulp.watch([path.source + 'styles/**/*'], ['styles']);
+  gulp.watch([path.source + 'scripts/**/*'], ['jshint', 'scripts']);
+  gulp.watch([path.source + 'fonts/**/*'], ['fonts']);
+  gulp.watch([path.source + 'images/**/*'], ['images']);
+  gulp.watch(['bower.json', 'assets/manifest.json'], ['build']);
 });
 
 // ### Build
@@ -283,6 +283,6 @@ gulp.task('wiredep', function() {
 
 // ### Gulp
 // `gulp` - Run a complete build. To compile for production run `gulp --production`.
-gulp.task('default', async function() { return gulp.series( ['clean'], function() {
+gulp.task('default', ['clean'], function() {
   gulp.start('build');
-})});
+});

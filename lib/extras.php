@@ -1157,3 +1157,10 @@ function wpse5742_request( $query_vars )
     }
     return $query_vars;
 }
+
+// Block Password Recovery
+function disable_reset_lost_password() 
+ {
+   return false;
+ }
+add_filter( 'allow_password_reset', 'disable_reset_lost_password');
