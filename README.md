@@ -17,7 +17,7 @@ Ianua is a WordPress theme that will help you make better WordPress websites.
 | Bower >= 1.3.12 | `bower -v`   | `npm install -g bower` |
 
 
-`npm install --unsafe-perm=true` to keep this baby up and running with old Gulp 2.x .
+`npm install --unsafe-perm=true` to keep this baby up and running with old gulp-sass 2.x .
 
 For more installation notes, refer to the [Install gulp and Bower](#install-gulp-and-bower) section in this document.
 
