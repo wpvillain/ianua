@@ -54,7 +54,7 @@ if( have_rows('homepage_builder') ):
 
 									        // display a sub field value ?>
 				        		        	<div class="bgrid">
-												<span class="icon"><i class="fa <?php the_sub_field('text_box_icon'); ?>"></i></span>
+												<span class="icon"><i class="<?php the_sub_field('text_box_icon'); ?>"></i></span>
 												<div class="service-content">
 													<h3><?php the_sub_field('text_box_title'); ?></h3> 
 						        		        	<?php the_sub_field('text_box'); ?>

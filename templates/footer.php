@@ -54,7 +54,7 @@
                 <?=     Setup\footer_menu()     ?>
                 </ul>
                 <div id="go-top">
-                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i><span>top</span></a>
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i class="fas fa-long-arrow-up"></i><span>top</span></a>
                 </div>        
             </div>
         </div> <!-- /row -->

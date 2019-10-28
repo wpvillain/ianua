@@ -40,15 +40,15 @@ function header_social(){
     
 
 if(get_theme_mod('ianua_header_social_facebook')){ ?>
-<span><a href="<?= get_theme_mod('ianua_header_social_facebook');   ?>" target="_blank"><i class="fa fa-facebook"></i></a></span>
+<span><a href="<?= get_theme_mod('ianua_header_social_facebook');   ?>" target="_blank"><i class="fab fa-facebook-f"></i></a></span>
 
 <?php } if(get_theme_mod('ianua_header_social_twitter')){ ?>
 
-<span><a href="<?= get_theme_mod('ianua_header_social_twitter'); ?>" target="_blank"><i class="fa fa-twitter"></i></a></span>
+<span><a href="<?= get_theme_mod('ianua_header_social_twitter'); ?>" target="_blank"><i class="fab fa-twitter"></i></a></span>
 
 <?php   } if(get_theme_mod('ianua_header_social_google')){  ?>
 
-<span><a href="<?= get_theme_mod('ianua_header_social_google'); ?>" target="_blank"><i class="fa fa-google-plus"></i></a></span>
+<span><a href="<?= get_theme_mod('ianua_header_social_google'); ?>" target="_blank"><i class="fab fa-google-plus"></i></a></span>
 
 <?php   }   
     

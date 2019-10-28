@@ -198,7 +198,7 @@ function assets()
     /**
     Font Awesome ascii characters where being converted gulp SASS when compiled rendering the icons useless see: https://github.com/sass/sass/issues/1395
     **/
-    wp_enqueue_style('ianua-fa', '//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', false, null);
+    wp_enqueue_style('ianua-fa', '//use.fontawesome.com/releases/v5.11.2/css/all.css', false, null);
     
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');

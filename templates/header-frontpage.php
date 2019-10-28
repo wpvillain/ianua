@@ -11,7 +11,7 @@ use Ianua\Extras; ?>
         <div id="nav-wrap">
             <a class="mobile-btn" href="#nav-wrap" title="Show navigation"> <span class="menu-icon">Menu</span> </a>
             <a class="mobile-btn" href="#" title="Hide navigation"> <span class="menu-icon">Menu</span> </a> <span class="mobile-search-trigger">
-                    <a href="#"><i class="fa fa-search"></i></a>
+                    <a href="#"><i class="fas fa-search"></i></a>
                 </span>
             <nav id="nav-contents" class="nav-primary">
                 <?php
@@ -22,7 +22,7 @@ use Ianua\Extras; ?>
                     <div class="nav-right-menu">
                         
                                 <div class="header-search">
-                                    <a href="#" id="search-trigger"><i class="fa fa-search"></i></a>
+                                    <a href="#" id="search-trigger"><i class="fas fa-search"></i></a>
                                 </div>
                                 <div class="header-social">
                                             <?= Extras\header_social(); ?>
