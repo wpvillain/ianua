@@ -1185,7 +1185,7 @@ function woo_post_redirect_by_custom_filters() {
     // this array can contain category names, slugs or even IDs.
     $catArray = ['WooCommerce'];
     if (is_single($post->ID) && has_category($catArray, $post)) {
-        $new_url = "https://wpvilla.in/{$post->post_name}/";  
+        $new_url = "https://wooaid.com/{$post->post_name}/";  
         wp_redirect($new_url, 301);
         exit;
     }
