@@ -1164,3 +1164,29 @@ function disable_reset_lost_password()
    return false;
  }
 add_filter( 'allow_password_reset', 'disable_reset_lost_password');
+
+// redirect WP stuff to WP Villain and Woo  stuff to Wooaid
+
+add_action('template_redirect', __NAMESPACE__ . '\\post_redirect_by_custom_filters');
+function post_redirect_by_custom_filters() {
+    global $post;
+    // this array can contain category names, slugs or even IDs.
+    $catArray = ['Sage','WordPress'];
+    if (is_single($post->ID) && has_category($catArray, $post)) {
+        $new_url = "https://wpvilla.in/{$post->post_name}/";  
+        wp_redirect($new_url, 301);
+        exit;
+    }
+}
+
+add_action('template_redirect', __NAMESPACE__ . '\\woo_post_redirect_by_custom_filters');
+function woo_post_redirect_by_custom_filters() {
+    global $post;
+    // this array can contain category names, slugs or even IDs.
+    $catArray = ['WooCommerce'];
+    if (is_single($post->ID) && has_category($catArray, $post)) {
+        $new_url = "https://wpvilla.in/{$post->post_name}/";  
+        wp_redirect($new_url, 301);
+        exit;
+    }
+}
