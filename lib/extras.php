@@ -1171,7 +1171,7 @@ add_action('template_redirect', __NAMESPACE__ . '\\post_redirect_by_custom_filte
 function post_redirect_by_custom_filters() {
     global $post;
     // this array can contain category names, slugs or even IDs.
-    $catArray = ['Sage Starter Theme', 'Sage', 'WordPress', 'Trellis', 'Bedrock'];
+    $catArray = ['Sage Starter Theme', 'Sage', 'WordPress', 'Trellis', 'Bedrock', 'Plugins', 'Themes'];
     if (is_single($post->ID) && has_category($catArray, $post)) {
         $new_url = "https://wpvilla.in/{$post->post_name}/";  
         wp_redirect($new_url, 301);
